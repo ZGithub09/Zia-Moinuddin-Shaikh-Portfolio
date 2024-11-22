@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Zia Moinuddin Shaikh Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"></a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#Extracurricular_Activities-section" class="nav-link"><span>Extracurricular Activities</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+				<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/data.png); width:55%;">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm </h1>
+						<h1 class="mb-4 mt-3"><span>Zia Moinuddin Shaikh<h1></span></h1>
+								
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'A Data Scientist  '	
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 180); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 180);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/zia-mionuddin-data-science/" class="btn btn-primary py-3 px-4">LinkedIn</a>
+						<a href="https://github.com/ZGithub09" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/withoutsmile.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+								<div class="col-sm-6 col-md-7">
+									<style>
+										.no-style-link {
+											color: inherit;
+											text-decoration: none;
+										}
+									</style>
+									
+									<div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Zia Moinuddin Shaikh</span></p>
+										<p><span class="title-s">Date of birth: </span> <span>January 09, 2001</span></p>
+										<p><span class="title-s">Address: </span> <span>Malad (West), Mumbai, India</span></p>
+										<p>
+											<span class="title-s">Email: </span> 
+											<span>
+												<a href="mailto:shaikhziamoinuddin@gmail.com" class="no-style-link">shaikhziamoinuddin@gmail.com</a>
+											</span>
+										</p>
+										<p>
+											<span class="title-s">Phone: </span> 
+											<span>
+												<a href="tel:+919920072714" class="no-style-link">+91 99 2007 2714</a>
+											</span>
+										</p>
+									</div>
+									
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Python</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">55%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p style="text-align: justify;">
+									Currently serving an apprenticeship as a data science at Spinnaker Analytics LLC. Completed Master Diploma in Data Science and Artificial Intelligence at Boston Institute of Analytics. With over a year of experience as a Data Executive and a strong foundation in data science and artificial intelligence, I am passionate about leveraging data to drive business insights and solutions. Both my professional and educational journey have equipped me with a robust skill set in data analysis, business analytics, SQL, Python, Machine Learning, Power BI, Tableau, mentorship, and quality control.
+								  </p>							  
+								  <ul class="about-info mt-4 px-md-0 px-2" style="text-align: justify;">
+									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Master Diploma in Data Science & Artificial Intelligence from Boston Institute of Analytics and Bachelor in Commerce, Financial Accounting and Auditing from the University of Mumbai</span></li>
+									<li class="d-flex"><span>Analytical Tools:</span> <span>Power BI, Tableau, Excel, Python, SQL</span></li>
+									<li class="d-flex"><span>Software:</span> <span>SQL, Python, Jupyter Notebooks, Power BI, Tableau</span></li>
+									<li class="d-flex"><span>Technical Language:</span> <span>Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn), SQL (MySQL, PostgreSQL, Microsoft SQL Server)</span></li>
+								</ul>
+								
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" number="12">12</span>+ <span></span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://github.com/ZGithub09" class="btn btn-primary py-3 px-3">GitHub</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Proactive Data Scientist with expertise in developing predictive models and conducting in-depth data analysis. Proven ability to translate complex data into actionable insights using advanced machine learning techniques, data visualization, and statistical analysis to drive business decisions.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">August 2024 – Present</span>
+					<h2>Data Science Intern</h2>
+					<span class="position">Spinnaker Analytics LLC</span>
+					<p class="mt-4">Key Responsibilities: 
+						<ul style="text-align: justify;">
+							<li>Support research-driven projects by developing and optimizing machine learning models (e.g., Random Forest, Logistic Regression, Gradient Boosting) to deliver predictive insights.</li>
+							<li>Conducting Exploratory Data Analysis (EDA) using Python libraries (Pandas, Matplotlib, Seaborn), uncovering patterns and trends as well as applying clustering, classification, and regression algorithms to solve diverse analytical challenges.</li>
+							<li>Preprocess datasets by scaling, encoding, feature engineering, and handling missing values to enhance data quality and model performance.</li>
+						</ul>
+						
+					</p>
+				</div>
+
+			</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">October 2022 – December 2023</span>
+						<h2>Data Executive</h2>
+						<span class="position">Duff & Phelps Global LLP</span>
+						<p class="mt-4">Key Responsibilities: 
+							<ul style="text-align: justify;">
+								<li>Responsible for handling claim-related tasks to support mailed letters and claim forms.</li>
+								<li>Reviewed and analyzed legal documents, reports, and records, including affidavits of service, Proof of claims, contracts, and case communication materials.</li>
+								<li>Undertook quality control review of reports prepared by Analysts in the team.</li>
+								<li>Handled ad hoc web correspondence in timely manner, escalated queries or potential challenges identified on the case.</li>
+								<li>Mentored and trained new Analysts in the team.</li>
+								<li>Acted as a back-up for other analysts in the team.</li>
+							</ul>
+							
+						</p>
+					</div>
+
+				</div>
+ 
+ 				<div class="col-md-6 offset-md-3">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">March 2021 – May 2021</span>
+						<h2>Content Garrage Private Limited</h2>
+						<span class="position">Research and Project Intern</span>
+						<p class="mt-4">Key Responsibilities: 
+							<ul style="text-align: justify;">
+								<li>Executed and managed marketing project involving qualitative research and secondary research.</li>
+								<li> Provided project management assistance by collecting and analyzing data for the research project and generated reports.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">July 2024</span>
+    					<h2>Master Diploma in Data Science & Artificial Intelligence</h2>
+    					<span class="position">Boston Institute of Analytics</span>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">April 2022</span>
+    					<h2>Bachelor in Commerce, Financial Accounting and Auditing</h2>
+    					<span class="position">University of Mumbai</span>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1b-Q_wVKFtzoJhe_JFL_dJ4c3tEkxbWLG/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Python, ML, Power BI & Tableau.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/ZGithub09/Heart_Disease_Prediction" class="block-20 zoom-effect" style="background-image: url('images/HEARTBEAT.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/ZGithub09/Heart_Disease_Prediction">Heart Disease Prediction using Python & Power BI</a></h3>
+                <style>
+					.justify-text {
+						text-align: justify;
+					}
+				</style>
+				
+				<p class="justify-text">
+					Developed a predictive model to accurately identify the presence of heart disease in patients using various machine learning algorithms. Created a Power BI dashboard to assist healthcare professionals in making informed decisions and improve patient outcomes through early detection and intervention.
+				</p>
+				
+			</div>
+		</div>
+	  </div>
+	  <div class="col-md-4 d-flex ftco-animate">
+		  <div class="blog-entry">
+		  <a href="https://github.com/ZGithub09/Walmart_Sales_Data-Analysis" class="block-20 zoom-effect" style="background-image: url('images/walmart.jpg');">
+		  </a>
+		  <div class="text mt-3 float-right d-block">
+
+			<h3 class="heading"><a href=https://github.com/ZGithub09/Walmart_Sales_Data-Analysis>Walmart Sales Data Analysis using MySQL</a></h3>
+			<p class="justify-text"></p>
+			
+				Analyzed Walmart's sales data to identify top branches and product lines, uncover sales patterns, and deliver actionable insights. Enhanced sales strategies and optimized inventory management through key insights on product performance, sales trends, and customer segments.</p>
+			<p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/ZGithub09/Coffee_Shop_Sales-Analysis" class="block-20 zoom-effect" style="background-image: url('images/coco.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/ZGithub09/Coffee_Shop_Sales-Analysis">Coffee Shop Sales Analysis using SQL & Power BI</a></h3>
+                <p class="justify-text">
+					Conducted a comprehensive Coffee Shop Sales Analysis project, focusing on KPIs like total sales, orders, and quantities sold. Utilized advanced data visualization techniques, including calendar heat maps, sales comparisons by weekday/weekend, and product category analysis, to identify trends and anomalies. Delivered actionable insights on sales performance across locations, product categories, and time segments, supporting data-driven decision-making and strategic planning.</p>
+				</p>
+
+
+				</div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/ZGithub09/Pizza_Sales-Analysis" class="block-20 zoom-effect" style="background-image: url('images/Pizza.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/ZGithub09/Pizza_Sales-Analysis">Pizza Sales Analysis using SQL & Power BI</a></h3>
+				<p class="justify-text">
+					Analyzed and visualized sales data for a pizza restaurant chain using SQL for data extraction and transformation and Power BI for interactive dashboards. Developed actionable insights to optimize operations, improve sales, and enhance customer satisfaction.</p>
+				<p>
+
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/ZGithub09/E-commerce_Sales-Dashboard" class="block-20 zoom-effect" style="background-image: url('images/E-commerce.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/ZGithub09/E-commerce_Sales-Dashboard">E-commerce Sales Dashboard using Tableau</a></h3>
+				  <p class="justify-text">
+					E-commerce sales project to analysed and visualize key metrics, including Sales, Profit, and Order Quantity. Created interactive dashboards showcasing market share, YTD vs. PYTD sales, and customer acquisition trends, providing actionable insights to support strategic decision-making and optimize business strategies.</p>
+				  <p>
+					
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/ZGithub09" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+	<section class="ftco-section" id="Extracurricular_Activities-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Extracurricular Activities</h1>
+			  <h2 class="mb-4">Extracurricular Activities</h2>
+			  <div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+				  <p></p>
+				</div>
+			  </div>
+			  <div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+					<a href="https://drive.google.com/file/d/1lByRK5Ce8Oq6nuPtue4Q7SsMIOEkSDHq/view?usp=sharing" class="block-20 zoom-effect" style="background-image: url('images/bcgx.png');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+	  
+					  <h3 class="heading"><a href="https://drive.google.com/file/d/1lByRK5Ce8Oq6nuPtue4Q7SsMIOEkSDHq/view?usp=sharing">BCGX - Data Science Job Simulation</a></h3>
+					  <p>Delivered an accurate customer churn prediction model using Python and data visualization techniques, alongside an executive summary providing actionable insights to the Associate Director.</p>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+					<a href="https://drive.google.com/file/d/1Jp-JDrh0btsYYs34S7o3HhAEKxBwO_YP/view?usp=sharing" class="block-20 zoom-effect" style="background-image: url('images/Symbol-Tata-Motors.jpg');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+	  
+					  <h3 class="heading"><a href="https://drive.google.com/file/d/1Jp-JDrh0btsYYs34S7o3HhAEKxBwO_YP/view?usp=sharing">Tata Data Visualisation: Empowering Business with Effective Insights</a></h3>
+					  <p>Developed impactful data visualizations for Tata Consultancy Services and facilitating executive decision-making.</p>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+					<a href="https://drive.google.com/file/d/1kSlrMl-WQ2yL3ETam5vBkgWVpohVrJ6t/view?usp=sharing" class="block-20 zoom-effect" style="background-image: url('images/Accenture-Logo.png');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+	  
+					  <h3 class="heading"><a href="https://drive.google.com/file/d/1kSlrMl-WQ2yL3ETam5vBkgWVpohVrJ6t/view?usp=sharing">Accenture Data Analytics and Visualization Job Simulation</a></h3>
+					  <p>Advised a hypothetical social media client at Accenture by analyzing 7 datasets to uncover content trends, and delivered key insights through a PowerPoint deck and video presentation for strategic decision-making.</p>
+					</div>
+				  </div>
+				</div>
+			  </div>
+		  
+					
+		  </section>
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Malad (West), Mumbai, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 99 2007 2714</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><span>
+					<a href="mailto:shaikhziamoinuddin@gmail.com" class="no-style-link">shaikhziamoinuddin@gmail.com</a>
+				</span></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1b-Q_wVKFtzoJhe_JFL_dJ4c3tEkxbWLG/view?usp=sharing">resumelink</a></p>
+	          </div>
+          </div>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Developed by Zia Moinuddin Shaikh -->
+	</script> Developed by Zia Moinuddin Shaikh <i class="icon-heart color-danger" ></i> | © All rights reserved.</i></a>
+	<!-- Developed by Zia Moinuddin Shaikh --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
